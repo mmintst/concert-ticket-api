@@ -28,6 +28,12 @@ export class ConcertsService {
     return this.concerts;
   }
 
+  getConcert(id: number): Concert {
+    const concert = this.concerts.find((concert) => concert.id === id);
+
+    return concert;
+  }
+
   createConcert(createConcertDto: CreateConcertDto) {
     const newConcert = {
       ...createConcertDto,

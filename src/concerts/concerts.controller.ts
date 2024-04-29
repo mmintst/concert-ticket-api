@@ -3,6 +3,8 @@ import {
   Controller,
   Delete,
   Get,
+  Param,
+  ParseIntPipe,
   Patch,
   Post,
   ValidationPipe,
@@ -18,6 +20,11 @@ export class ConcertsController {
   @Get()
   getConcerts() {
     return this.concertsService.getConcerts;
+  }
+
+  @Get(':id')
+  getConcert(@Param('id', ParseIntPipe) id: number): Concert {
+    return this.concertsService.getConcert(id);
   }
 
   @Post()
