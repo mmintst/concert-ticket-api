@@ -34,13 +34,13 @@ export class ConcertsController {
     return this.concertsService.createConcert(createConcertDto);
   }
 
-  @Patch()
+  @Patch(':id')
   updateConcert() {
     return '';
   }
 
-  @Delete()
-  removeConcert() {
-    return '';
+  @Delete(':id')
+  removeConcert(@Param('id', ParseIntPipe) id: number) {
+    return this.concertsService.removeConcert(id);
   }
 }

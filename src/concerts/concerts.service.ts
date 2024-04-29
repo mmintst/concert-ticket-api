@@ -45,4 +45,12 @@ export class ConcertsService {
 
     return newConcert;
   }
+
+  removeConcert(id: number) {
+    const toBeRemoved = this.getConcert(id);
+
+    this.concerts = this.concerts.filter((concert) => concert.id !== id);
+
+    return toBeRemoved;
+  }
 }
