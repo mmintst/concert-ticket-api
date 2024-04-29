@@ -1,5 +1,15 @@
-import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Patch,
+  Post,
+  ValidationPipe,
+} from '@nestjs/common';
 import { ConcertsService } from './concerts.service';
+import { CreateConcertDto } from './dto/create-concert.dto';
+import { Concert } from './entities/concert.entity';
 
 @Controller('concerts')
 export class ConcertsController {
@@ -11,8 +21,10 @@ export class ConcertsController {
   }
 
   @Post()
-  createConcert() {
-    return '';
+  createConcert(
+    @Body(new ValidationPipe()) createConcertDto: CreateConcertDto,
+  ): Concert {
+    return this.concertsService.createConcert(createConcertDto);
   }
 
   @Patch()
