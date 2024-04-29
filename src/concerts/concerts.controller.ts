@@ -21,7 +21,7 @@ export class ConcertsController {
 
   @Get()
   getConcerts() {
-    return this.concertsService.getConcerts;
+    return this.concertsService.getConcerts();
   }
 
   @Get(':id')
