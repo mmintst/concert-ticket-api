@@ -4,6 +4,7 @@ import {
   Delete,
   ForbiddenException,
   Get,
+  NotFoundException,
   Param,
   ParseIntPipe,
   Patch,
@@ -21,19 +22,31 @@ export class ConcertsController {
 
   @Get()
   getConcerts() {
-    return this.concertsService.getConcerts();
+    try {
+      return this.concertsService.getConcerts();
+    } catch (err) {
+      throw new NotFoundException();
+    }
   }
 
   @Get(':id')
   getConcert(@Param('id', ParseIntPipe) id: number): Concert {
-    return this.concertsService.getConcert(id);
+    try {
+      return this.concertsService.getConcert(id);
+    } catch (err) {
+      throw new NotFoundException();
+    }
   }
 
   @Post()
   createConcert(
     @Body(new ValidationPipe()) createConcertDto: CreateConcertDto,
   ): Concert {
-    return this.concertsService.createConcert(createConcertDto);
+    try {
+      return this.concertsService.createConcert(createConcertDto);
+    } catch (err) {
+      throw new ForbiddenException();
+    }
   }
 
   // for user to reserve or cancel concert
@@ -54,6 +67,10 @@ export class ConcertsController {
 
   @Delete(':id')
   removeConcert(@Param('id', ParseIntPipe) id: number) {
-    return this.concertsService.removeConcert(id);
+    try {
+      return this.concertsService.removeConcert(id);
+    } catch (err) {
+      throw new ForbiddenException();
+    }
   }
 }
