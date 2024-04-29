@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Delete,
+  ForbiddenException,
   Get,
   Param,
   ParseIntPipe,
@@ -12,6 +13,7 @@ import {
 import { ConcertsService } from './concerts.service';
 import { CreateConcertDto } from './dto/create-concert.dto';
 import { Concert } from './entities/concert.entity';
+import { ConcertActionDto } from './dto/update-concert.dto';
 
 @Controller('concerts')
 export class ConcertsController {
@@ -34,9 +36,20 @@ export class ConcertsController {
     return this.concertsService.createConcert(createConcertDto);
   }
 
+  // for user to reserve or cancel concert
   @Patch(':id')
-  updateConcert() {
-    return '';
+  updateConcert(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() concertActionDto: ConcertActionDto,
+  ): Concert {
+    const toBeUpdatedConcert = this.concertsService.getConcert(id);
+    if (
+      concertActionDto.action === 'reserve' &&
+      toBeUpdatedConcert.reservedSeats === toBeUpdatedConcert.totalSeats
+    ) {
+      throw new ForbiddenException();
+    }
+    return this.concertsService.updateConcert(id, concertActionDto);
   }
 
   @Delete(':id')
