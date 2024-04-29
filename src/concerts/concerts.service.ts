@@ -1,12 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { Concert } from './entities/concert.entity';
 import { CreateConcertDto } from './dto/create-concert.dto';
-import { v4 as uuidv4 } from 'uuid';
 import { ConcertActionDto } from './dto/update-concert.dto';
 import { HistoryService } from 'src/history/history.service';
 
 @Injectable()
 export class ConcertsService {
+  @Inject(HistoryService)
   private readonly historyService: HistoryService;
   private concerts: Concert[] = [
     {
@@ -39,8 +39,8 @@ export class ConcertsService {
 
   createConcert(createConcertDto: CreateConcertDto) {
     const newConcert = {
+      id: Math.floor(Math.random() * 10000),
       ...createConcertDto,
-      id: uuidv4,
       reservedSeats: 0,
       cancelledSeats: 0,
     };
