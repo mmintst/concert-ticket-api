@@ -80,7 +80,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Usage
 
-For the usage of API, it can be seperated into two parts. The first part is APIs for admin which can create ,and delete concerts on the list and can also view all of the concerts' information and user's reservation and cancellation history. The second part id APIs for user which can view, reserve and cancel the concerts.
+For the usage of API, it can be seperated into two parts. The first part is APIs for admin which can create and delete concerts on the list and can also view all of the concerts' information and user's reservation and cancellation history. The second part is APIs for user which can view, reserve and cancel the concerts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
