@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-<h5 align="center">concert-ticket-api</h5>
+<h1 align="center">concert-ticket-api</h1>
 
 </div>
 
