@@ -1,73 +1,106 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<a name="readme-top"></a>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<!-- HEADER -->
+<br />
+<div align="center">
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h3 align="center">concert-ticket-api</h3>
 
-## Description
+  <p align="center">
+    A FREE tickets for every concert!
+    <br />
+    <br />
+  </p>
+</div>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#bonus-track">Bonus Task</a></li>
+  </ol>
+</details>
 
-## Installation
+<!-- ABOUT THE PROJECT -->
 
-```bash
-$ npm install
-```
+## About The Project
 
-## Running the app
+This project is a website for concerts' tickets reservation with both admin and user role. For back-end, the website provides a RESTful API with CRUD operations created with NestJS framework. For front-end, please visit: [concert-ticket-frontend](https://github.com/mmintst/concert-ticket-frontend)
 
-```bash
-# development
-$ npm run start
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# watch mode
-$ npm run start:dev
+### Built With
 
-# production mode
-$ npm run start:prod
-```
+- [NestJS](https://nestjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Test
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```bash
-# unit tests
-$ npm run test
+<!-- GETTING STARTED -->
 
-# e2e tests
-$ npm run test:e2e
+## Getting Started
 
-# test coverage
-$ npm run test:cov
-```
+To get a local copy up and running follow these simple example steps.
 
-## Support
+### Prerequisites
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-## Stay in touch
+### Installation
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mmintst/concert-ticket-api.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
 
-## License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Nest is [MIT licensed](LICENSE).
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+For the usage of API, it can be seperated into two parts. The first part is APIs for admin which can create ,and delete concerts on the list and can also view all of the concerts' information and user's reservation and cancellation history. The second part id APIs for user which can view, reserve and cancel the concerts.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Salisa Techasiripaiboon - salisa.t.mint@gmail.com
+
+Project Link: [https://github.com/mmintst/concert-ticket-api](https://github.com/mmintst/concert-ticket-api)
+
+As an assignment, I was unable to complete all of the requirements within the suggested time limit. Therefore, I decided to break down the requirements into small tasks and categorize them to prioritize the most important functions of the website. This is why I decided to leave out Unit Tests and Responsive UI as the last parts to do.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- BONUS TASK -->
+
+## Bonus Task
+
+- How to handle when many users want to reserve the ticket at the same time?
+
+When many users want to reserve the ticket, try to access the website and do the same action at the same time, it can cause an incorrect result which is a problem from race condition. To avoid race codition, we can use mutual exclusion to ensure that only one process can access data at a time. For example, when too many people are trying to reserve the ticket for the same concert on the website at the same time, we can make a condition of locking the data and block the accessing of data while the one who come first is making reservation as in action to data. When the first reservation is finished, the lock will be released and the next reservation can be made.
