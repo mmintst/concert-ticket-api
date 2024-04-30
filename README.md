@@ -4,13 +4,8 @@
 <br />
 <div align="center">
 
-<h3 align="center">concert-ticket-api</h3>
+<h5 align="center">concert-ticket-api</h5>
 
-  <p align="center">
-    A FREE tickets for every concert!
-    <br />
-    <br />
-  </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -73,6 +68,10 @@ To get a local copy up and running follow these simple example steps.
 2. Install NPM packages
    ```sh
    npm install
+   ```
+3. Run project
+   ```sh
+   npm run start:dev
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
